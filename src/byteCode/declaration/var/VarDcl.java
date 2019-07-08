@@ -5,7 +5,6 @@ import byteCode.exp.Exp;
 import byteCode.symTable.SymTable;
 import byteCode.symTable.dscp.Dscp;
 import jdk.internal.org.objectweb.asm.ClassVisitor;
-import jdk.internal.org.objectweb.asm.MethodVisitor;
 import jdk.internal.org.objectweb.asm.Type;
 
 public abstract class VarDcl extends Node {
@@ -38,5 +37,5 @@ public abstract class VarDcl extends Node {
     public boolean isConstant(){
         return Constant;
     }
-    abstract void calculateType(MethodVisitor mv, ClassVisitor cv);
+    abstract void calculateType();
 }

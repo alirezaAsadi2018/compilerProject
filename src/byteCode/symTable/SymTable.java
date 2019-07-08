@@ -178,7 +178,7 @@ public class SymTable {
 
     public void addVariable(Dscp dscp, String name) {
         if (getLastFrame().containsKey(name)) {
-//            throw new VariableNotFound();
+            throw new IllegalArgumentException("variable already declared");
         }
         getLastFrame().put(name, dscp);
         if (dscp instanceof DscpVarDynamic)

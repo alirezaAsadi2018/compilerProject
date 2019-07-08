@@ -13,7 +13,6 @@ import jdk.internal.org.objectweb.asm.util.TraceClassVisitor;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -68,7 +67,7 @@ public class StructDcl extends Node {
 
         cv.visit(V1_8, ACC_PUBLIC + ACC_SUPER, getName(), null, Type.getInternalName(Object.class), null);
         for (VarDcl var : variables.values()) {
-            var.calculateType(null, null);
+            var.calculateType();
             if (UtilFunctions.isRecord(var.getType()) && !SymTable.getInstance().isRecordDefined(var.getType().getClassName())) {
 //                throw new InvalidVariableType("Record Type Is Not Defined");
             }

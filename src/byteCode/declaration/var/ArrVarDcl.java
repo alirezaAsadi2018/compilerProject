@@ -50,7 +50,7 @@ public class ArrVarDcl extends VarDcl {
                 throw new RuntimeException("Bad Index Type"); // TODO: 01/07/2018 Write Good Exception
         });
 
-        calculateType(null, null);
+        calculateType();
         Dscp dscp;
 
         if (staticDec) {
@@ -64,7 +64,7 @@ public class ArrVarDcl extends VarDcl {
 
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
-        calculateType(mv, cv);
+        calculateType();
         declare(Static, type, Constant);
         if (getDSCP() instanceof DscpDynamic) {
             for (Exp dimension : dimensions) {
@@ -100,7 +100,7 @@ public class ArrVarDcl extends VarDcl {
     }
 
     @Override
-    void calculateType(MethodVisitor mv, ClassVisitor cv) {
+    void calculateType() {
         // TODO: 02/07/2018 Check is Defined For Records
         Type varType = SymTable.getTypeFromName(type1);
         String repeatedArray = new String(new char[dimensions.size()]).replace("\0", "[");

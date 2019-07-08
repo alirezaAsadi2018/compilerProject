@@ -35,11 +35,7 @@ public class SmplVar extends VarDcl {
             throw new RuntimeException("auto must have value!");
     }
 
-    /**
-     * @param staticDec check if it is static or not
-     * @param type      Type of Variable
-     * @throws IllegalArgumentException if type and name is not set!
-     */
+
     private void declare(boolean staticDec, Type type, boolean Constant) {
         // TODO: 01/07/2018 SymTable Should Change
 
@@ -60,8 +56,8 @@ public class SmplVar extends VarDcl {
 
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
-        calculateType(mv,cv);
-        declare(staticDec, type, Constant);
+        calculateType(); // find asm.Type from string
+        declare(staticDec, type, Constant); // add to symbol table
         Dscp dscp = getDSCP();
         if (dscp instanceof DscpStatic) {
             addFieldToClass(cv, true);
@@ -79,11 +75,10 @@ public class SmplVar extends VarDcl {
     }
 
     @Override
-    void calculateType(MethodVisitor mv, ClassVisitor cv) {
+    void calculateType() {
         // TODO: 02/07/2018 Check is correct for Records
-        //Just a Trick :)
-        ClassVisitor dcv = new ClassVisitor(327680){};
-        MethodVisitor dmv = new MethodVisitor(327680) {};
+        ClassVisitor dcv = new ClassVisitor(327680){}; // another cv for compiling code right now
+        MethodVisitor dmv = new MethodVisitor(327680) {}; // another mv for compiling code right now
 
         if (!varType.equals("auto"))
             type = getTypeFromName(varType);
@@ -93,10 +88,6 @@ public class SmplVar extends VarDcl {
         }
     }
 
-    @Override
-    public Exp getExp() {
-        return super.getExp();
-    }
 
     @Override
     public void addFieldToClass(ClassVisitor cv, boolean isStatic){
