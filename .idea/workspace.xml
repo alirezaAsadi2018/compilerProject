@@ -2,188 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="479a0d9c-0235-4ad4-a5ba-2d9b0a4e3034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/bin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_jxpath_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_cup_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_cup_11b_runtime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jflex_full_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/src.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-jxpath-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject/compiled/$Main.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject/cup/myparser.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject/input - Copy.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject/input.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject/myProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/compiled/$Main.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/cup/java-cup-11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/cup/myparser.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/input - Copy.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/input.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/java-cup-11b-runtime.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/java-cup-11b.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/jflex/jflex-full-1.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/myProject1/myProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/block/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/function/ExternFuncDcl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/function/FuncArg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/function/FuncDcl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/function/FunctionDeclaration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/function/StaticVarsExtern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/var/ArrVarDcl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/var/Dcls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/var/SmplVar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/var/SpecClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/var/StructDcl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/declaration/var/VarDcl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/Exp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/BinExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/AritAnd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/AritOr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/Div.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/Minus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/Mod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/Mult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/Plus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/arith/Xor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/And.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/Cond.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/EqEq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/Gt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/GtEq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/InEq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/Lt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/LtEq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/binExp/cond/Or.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/BoolConstExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/CharConstExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/IntConstExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/LongConstExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/RealConstExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/SizeOf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/constant/StringConstExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/Not.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/PostMinMin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/PostPlusPlus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/PreMinMin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/PrePlusPlus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/Tilde.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/UMin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/unExp/UnExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/var/ArrVarExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/var/RecordVarExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/var/SmplVarExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/exp/var/Var.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/Break.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/Continue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/ExpStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/MethodCall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/Return.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/Statement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/assignments/Assignment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/assignments/DivideAssign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/assignments/EqAssign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/assignments/MinusAssign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/assignments/MultAssign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/assignments/PlusAssign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/cond/Case.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/cond/If.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/cond/Switch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/loop/For.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/loop/ForEach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/loop/Loop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/statement/loop/Repeat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/HashMapExtended.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/SymTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/Dscp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpArrDynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpArrStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpDynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpRecDynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpRecStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpVarDynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/symTable/dscp/DscpVarStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/util/DefinedValues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/byteCode/util/UtilFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiled/$Main.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cup/myparser.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cup/parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cup/sym.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input - Copy.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jflex/MyScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jflex/mylexer.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/myJava/MyMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/myJava/MyMain2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/myProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/Lexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/c.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/c.jflex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/complicated.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/input.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/makeTest.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/tree-view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/tree-view.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/c/tree.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/calc/calc.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/calc/makeCalc.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/calc/scanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/input.minijava" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/makeAnnotatedTest.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/makeNonAnnotatedTest.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/makeXMLtest.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/TestVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/codegen.sq" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/make.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/minijava.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/minijava.jflex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/simple.minijava" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/tree-view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/tree-view.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava/tree.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/bin/JFlex.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/bin/java-cup-11b-runtime.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/bin/java-cup-11b.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/cup/Parser.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/expres.mp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/flex/Scanner.jflex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/input.minijava" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/lib/java-cup-11b-runtime.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/Cond.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/Decl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/Expr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/InMemoryParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/MinijavaVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/minijava/Stmt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/miniparser/CFGGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/miniparser/Lexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/miniparser/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/miniparser/MiniJVMGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/miniparser/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/miniparser/SyntaxTreeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/src/miniparser/sym.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/minijava2/trees.mp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/test-correctannotations.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/test-noannotations.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/tree-view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/tree-view.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgrammars/tree.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -240,7 +60,7 @@
           <entry key="class" value="16" />
           <entry key="cup" value="11" />
           <entry key="flex" value="6" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="java" value="366" />
           <entry key="jflex" value="1" />
         </counts>
@@ -252,7 +72,7 @@
           <entry key="Cup file" value="11" />
           <entry key="JAVA" value="366" />
           <entry key="JFlex" value="6" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -261,7 +81,7 @@
           <entry key="cup" value="3526" />
           <entry key="dummy" value="16" />
           <entry key="flex" value="56" />
-          <entry key="gitignore" value="21" />
+          <entry key="gitignore" value="46" />
           <entry key="java" value="3319" />
         </counts>
       </usages-collector>
@@ -271,7 +91,7 @@
           <entry key="Cup file" value="3515" />
           <entry key="JAVA" value="3330" />
           <entry key="JFlex" value="56" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="PLAIN_TEXT" value="62" />
         </counts>
       </usages-collector>
     </session>
@@ -287,20 +107,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/.gitignore">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+            <state relative-caret-position="192">
+              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/myJava/MyMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="186">
+              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -393,7 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/byteCode/statement/Return.java" />
         <option value="$PROJECT_DIR$/src/byteCode/statement/loop/Loop.java" />
         <option value="$PROJECT_DIR$/src/byteCode/statement/loop/ForEach.java" />
         <option value="$PROJECT_DIR$/src/byteCode/statement/cond/Case.java" />
@@ -444,6 +263,7 @@
         <option value="$PROJECT_DIR$/src/input.c" />
         <option value="$PROJECT_DIR$/src/myJava/MyMain.java" />
         <option value="$PROJECT_DIR$/src/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -478,17 +298,6 @@
               <item name="cup-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cup-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="myJava" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cup-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="myJava" type="462c0819:PsiDirectoryNode" />
-              <item name="MyMain2.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -498,7 +307,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562580287873" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562580929449" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -549,12 +358,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562177322170</updated>
       <workItem from="1562177324166" duration="262000" />
-      <workItem from="1562177715413" duration="71151000" />
+      <workItem from="1562177715413" duration="71965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71413000" />
+    <option name="totallyTimeSpent" value="72227000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,8 +376,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -584,7 +394,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.34468085" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.34468085" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -609,18 +419,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/byteCode/exp/binExp/cond/InEq.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/byteCode/exp/binExp/cond/Cond.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1070,20 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cup/myparser.cup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/myJava/MyMain2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -1096,11 +880,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/myJava/MyMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="186">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cup/myparser.cup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
         </state>
       </provider>
     </entry>
