@@ -10,25 +10,13 @@ import java.util.ArrayList;
 public class Dcls extends Node {
     public ArrayList<SpecClass> specClasses;
     public String type;
-    boolean Constant;
+    public boolean Constant;
     ArrayList<VarDcl> dcls = new ArrayList<>();
 
     public Dcls(ArrayList<SpecClass> specClasses, String type, boolean Constant) {
         this.specClasses = specClasses;
         this.type = type;
         this.Constant = Constant;
-
-        for (SpecClass c : this.specClasses) {
-            if (c.dims == null || c.dims.size() == 0) {
-                if (c.value == null) {
-                    dcls.add(new SmplVar(c.name, type, DefinedValues.getScope(), Constant));
-                } else {
-                    dcls.add(new SmplVar(c.name, type, c.value, DefinedValues.getScope(), Constant));
-                }
-            } else {
-                dcls.add(new ArrVarDcl(c.name, type, c.dims, DefinedValues.getScope(), Constant));
-            }
-        }
 
 
     }
@@ -40,6 +28,17 @@ public class Dcls extends Node {
     //TODO keep in mind that the type maybe of struct
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
+        for (SpecClass c : this.specClasses) {
+            if (c.value == null) {
+                if (c.dims == null || c.dims.size() == 0) {
+                    dcls.add(new SmplVar(c.name, type, DefinedValues.getScope(), Constant));
+                }else{
+                    dcls.add(new ArrVarDcl(c.name, type, c.dims, DefinedValues.getScope(), Constant));
+                }
+            }else{
+                dcls.add(new SmplVar(c.name, type, c.value, DefinedValues.getScope(), Constant));
+            }
+        }
         for (VarDcl v : dcls) {
             v.compile(mv, cv);
         }
