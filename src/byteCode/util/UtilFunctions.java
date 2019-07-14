@@ -7,18 +7,12 @@ import jdk.internal.org.objectweb.asm.Type;
 
 public class UtilFunctions {
 
-    public static boolean isRecord(Type type) {
-        if (type == Type.BOOLEAN_TYPE || type == Type.INT_TYPE || type == Type.CHAR_TYPE || type == Type.LONG_TYPE || type == Type.FLOAT_TYPE || type == Type.DOUBLE_TYPE || type == Type.SHORT_TYPE) {
-            return false;
-        }
-        return true;
+    public static boolean isObject(Type type) {
+        return type != Type.BOOLEAN_TYPE && type != Type.INT_TYPE && type != Type.CHAR_TYPE && type != Type.LONG_TYPE && type != Type.FLOAT_TYPE && type != Type.DOUBLE_TYPE;
     }
 
     public static boolean isInteger(Type type) {
-        if (type == Type.BOOLEAN_TYPE || type == Type.INT_TYPE || type == Type.CHAR_TYPE || type == Type.SHORT_TYPE) {
-            return true;
-        }
-        return false;
+        return type == Type.BOOLEAN_TYPE || type == Type.INT_TYPE || type == Type.CHAR_TYPE;
     }
 
     private static boolean checkForDouble(Type type1, Type type2, MethodVisitor mv, ClassVisitor cv) {
@@ -58,7 +52,7 @@ public class UtilFunctions {
     }
 
     public static void cast(Type type1, Type type2, MethodVisitor mv, ClassVisitor cv) {
-        if (isRecord(type1) || isRecord(type2)) {
+        if (isObject(type1) || isObject(type2)) {
             if (type1 != type2) {
                 throw new RuntimeException("we don't have operator overloading ... yet");
             }
@@ -81,9 +75,7 @@ public class UtilFunctions {
             return Opcodes.T_DOUBLE;
         else if (type == Type.CHAR_TYPE)
             return Opcodes.T_CHAR;
-        else if (type == Type.BOOLEAN_TYPE)
+        else //(type == Type.BOOLEAN_TYPE)
             return Opcodes.T_BOOLEAN;
-        else
-            throw new RuntimeException("Should Not Happen");
     }
 }

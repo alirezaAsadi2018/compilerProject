@@ -1,0 +1,27 @@
+// class version 52.0 (52)
+// access flags 0x21
+public class $Main {
+
+
+  // access flags 0x9
+  public static I c
+
+  // access flags 0x9
+  public static I a = 0
+
+  // access flags 0x9
+  public static main()I
+    ICONST_3
+    PUTSTATIC $Main.a : I
+    ICONST_0
+    IRETURN
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x9
+  public static main([Ljava/lang/String;)V
+    INVOKESTATIC $Main.main ()I
+    RETURN
+    MAXSTACK = 0
+    MAXLOCALS = 0
+}

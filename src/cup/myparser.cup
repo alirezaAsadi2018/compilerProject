@@ -136,7 +136,6 @@ extern_dcl ::= EXTERN type:t ID:id SEMCOLON;
 
 struct_dcl ::= RECORD ID:id BEGIN dcls:ds END RECORD SEMCOLON
                  {:Collections.reverse(ds); RESULT = new StructDcl(ds, id);:};
-//declaration begins.....
 dcls ::=  dcl:d dcls:ds {:ds.add(d); RESULT = ds; :}
         |
           dcl:d {:ArrayList<Dcls> a = new ArrayList<>(); a.add(d); RESULT = a; :};
@@ -159,12 +158,12 @@ dcl_cnt ::= ID:id {:RESULT = new SpecClass(id, null, null);:}
 
 block ::= BEGIN dclst:dst END {:Collections.reverse(dst); RESULT = new Block(dst); :};
 
-dclst ::=    dcl:d dclst:dst {:dst.add(d); RESULT = dst; :}
+dclst ::=    dcl:d dclst:dst  {:dst.add(d); RESULT = dst; :}
            | st:s dclst:dst  {:dst.add(s); RESULT = dst; :}
            |    {:RESULT = new ArrayList<Node>(); :};
 
-st ::=    method_call:m  {:RESULT = m; :}
-        | assignment:a   {:RESULT = a; :}
+st ::=    method_call:m SEMCOLON  {:RESULT = m; :}
+        | assignment:a SEMCOLON  {:RESULT = a; :}
         | cond_st:st {:RESULT = st; :}
         | loop_st:st {:RESULT = st; :}
         | RETURN expr:e SEMCOLON {:RESULT = new Return(e); :}

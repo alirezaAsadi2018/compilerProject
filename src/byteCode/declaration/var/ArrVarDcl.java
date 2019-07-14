@@ -18,15 +18,14 @@ import static jdk.internal.org.objectweb.asm.Opcodes.*;
 
 public class ArrVarDcl extends VarDcl {
     boolean Static;
-    String type1;
+    String typeString;
     private List<Exp> dimensions;
 
     public ArrVarDcl(String varName, String type, int dims, boolean Static, boolean Constant) {
         name = varName;
         this.Static = Static;
         this.Constant = Constant;
-        type1 = type;
-        //TODO do something with constant
+        typeString = type;
     }
 
 
@@ -35,28 +34,16 @@ public class ArrVarDcl extends VarDcl {
         this.dimensions = dimensions;
         this.Static = Static;
         this.Constant = Constant;
-        type1 = type;
-        //TODO do something with constant
+        typeString = type;
     }
 
-    private void declare(boolean staticDec, Type varType, boolean Constant) {
-        // TODO: 01/07/2018 SymbolTable Should Change
-        if (name == null || varType == null)
-            throw new IllegalArgumentException();
-
-
-        dimensions.forEach(exp -> {
-            if (!UtilFunctions.isInteger(exp.getType()))
-                throw new RuntimeException("Bad Index Type"); // TODO: 01/07/2018 Write Good Exception
-        });
-
-        calculateType();
+    private void declare(boolean staticDec, boolean Constant) {
         Dscp dscp;
 
         if (staticDec) {
-            dscp = new DscpArrStatic(name, type, dimensions.size(), Constant);
+            dscp = new DscpArrStatic(name, getType(), dimensions.size(), Constant);
         } else {
-            dscp = new DscpArrDynamic(name, type, SymTable.getInstance().returnNewIndex(), dimensions.size(), Constant);
+            dscp = new DscpArrDynamic(name, getType(), SymTable.getInstance().returnNewIndex(), dimensions.size(), Constant);
         }
 
         SymTable.getInstance().addVariable(dscp, name);
@@ -65,14 +52,14 @@ public class ArrVarDcl extends VarDcl {
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
         calculateType();
-        declare(Static, type, Constant);
+        declare(Static, Constant);
         if (getDSCP() instanceof DscpDynamic) {
             for (Exp dimension : dimensions) {
                 dimension.compile(mv, cv);
             }
 
             if (dimensions.size() == 1) {
-                if (!UtilFunctions.isRecord(getType().getElementType())) {
+                if (!UtilFunctions.isObject(getType().getElementType())) {
                     mv.visitIntInsn(NEWARRAY, UtilFunctions.getTType(getType().getElementType()));
                 } else {
                     mv.visitTypeInsn(ANEWARRAY, getType().getElementType().getInternalName());
@@ -93,17 +80,22 @@ public class ArrVarDcl extends VarDcl {
         access += isConstant() ? Opcodes.ACC_FINAL : 0;
         access += isStatic ? Opcodes.ACC_STATIC : 0;
 
-        String repeatedArray = new String(new char[dimensions.size()]).replace("\0", "[");
-        Type arrayType = Type.getType(repeatedArray + type.getDescriptor());
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < dimensions.size(); i++) {
+            stringBuilder.append("[");
+        }
+        Type arrayType = Type.getType(stringBuilder + type.getDescriptor());
 
         cv.visitField(access, getName(), arrayType.getDescriptor(), null, null).visitEnd();
     }
 
     @Override
     void calculateType() {
-        // TODO: 02/07/2018 Check is Defined For Records
-        Type varType = SymTable.getTypeFromName(type1);
-        String repeatedArray = new String(new char[dimensions.size()]).replace("\0", "[");
-        type = Type.getType(repeatedArray + varType.getDescriptor());
+        Type varType = SymTable.getTypeFromName(typeString);
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < dimensions.size(); i++) {
+            stringBuilder.append("[");
+        }
+        type = Type.getType(stringBuilder.toString() + varType.getDescriptor());
     }
 }

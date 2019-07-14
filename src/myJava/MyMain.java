@@ -13,15 +13,7 @@ public class MyMain {
     public static void main(String[] args) {
         ComplexSymbolFactory csf = new ComplexSymbolFactory();
         try {
-            MyScanner scanner = new MyScanner(new FileReader("src/input.c"), csf);
-
-//            ArrayList<StaticVarsExtern> ins = new ArrayList<>();
-//            ins.add(new StaticVarsExtern("Ljava/io/PrintStream;","out","java/lang/System"));
-//            ExternFuncDcl a = new ExternFuncDcl("java/io/PrintStream",ins,"println","(I)V");
-//            a = new ExternFuncDcl("java/io/PrintStream",ins,"println","(D)V");
-//            ins = new ArrayList<>();
-//            ins.add(new StaticVarsExtern("Ljava/io/PrintStream;","out","java/lang/System"));
-
+            MyScanner scanner = new MyScanner(new FileReader("input.c"), csf);
             parser p = new parser(scanner, csf);
             Object result = p.parse().value;
             Program pr = (Program) result;

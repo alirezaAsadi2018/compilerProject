@@ -17,15 +17,12 @@ public class Dcls extends Node {
         this.specClasses = specClasses;
         this.type = type;
         this.Constant = Constant;
-
-
     }
 
     public ArrayList<VarDcl> getVariables() {
         return dcls;
     }
 
-    //TODO keep in mind that the type maybe of struct
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
         for (SpecClass c : this.specClasses) {

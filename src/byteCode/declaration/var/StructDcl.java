@@ -25,10 +25,10 @@ public class StructDcl extends Node {
     private String name;
     private Type type;
 
-    public StructDcl(ArrayList<Dcls> dclses, String name) {
+    public StructDcl(ArrayList<Dcls> fields, String name) {
         this.name = name;
 
-        for (Dcls dcls : dclses) {
+        for (Dcls dcls : fields) {
             ArrayList<VarDcl> vars = dcls.getVariables();
             for (VarDcl var : vars) {
                 variables.put(var.getName(), var);
@@ -68,7 +68,7 @@ public class StructDcl extends Node {
         cv.visit(V1_8, ACC_PUBLIC + ACC_SUPER, getName(), null, Type.getInternalName(Object.class), null);
         for (VarDcl var : variables.values()) {
             var.calculateType();
-            if (UtilFunctions.isRecord(var.getType()) && !SymTable.getInstance().isRecordDefined(var.getType().getClassName())) {
+            if (UtilFunctions.isObject(var.getType()) && !SymTable.getInstance().isRecordDefined(var.getType().getClassName())) {
 //                throw new InvalidVariableType("Record Type Is Not Defined");
             }
             var.addFieldToClass(cv, false);
