@@ -29,8 +29,6 @@ public abstract class VarDcl extends Node {
     }
 
 
-    abstract public void addFieldToClass(ClassVisitor cv, boolean isStatic);
-
     public Dscp getDSCP() {
         return SymTable.getInstance().getDescriptor(name);
     }

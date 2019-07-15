@@ -33,10 +33,10 @@ public class FunctionDeclaration extends FuncDcl {
         SymTable.setLastSeenFunction(this);
         for (FuncArg f : arguments){
             if(f.getDimensions()==0){
-                VarDcl v = new SmplVar(f.getName(),f.getType().getClassName(),false,false);
+                VarDcl v = new SmplVar(f.getName(),f.getType().getClassName(), false);
                 v.compile(newMv,cv);
             }else{
-                VarDcl v = new ArrVarDcl(f.getName(),f.getType().getClassName(),f.getDimensions(),false,false);
+                VarDcl v = new ArrVarDcl(f.getName(),f.getType().getClassName(),f.getDimensions(), false);
                 v.compile(newMv,cv);
             }
         }

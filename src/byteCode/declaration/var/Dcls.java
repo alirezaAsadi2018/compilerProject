@@ -1,7 +1,6 @@
 package byteCode.declaration.var;
 
 import byteCode.Node;
-import byteCode.util.DefinedValues;
 import jdk.internal.org.objectweb.asm.ClassVisitor;
 import jdk.internal.org.objectweb.asm.MethodVisitor;
 
@@ -28,12 +27,12 @@ public class Dcls extends Node {
         for (SpecClass c : this.specClasses) {
             if (c.value == null) {
                 if (c.dims == null || c.dims.size() == 0) {
-                    dcls.add(new SmplVar(c.name, type, DefinedValues.getScope(), Constant));
+                    dcls.add(new SmplVar(c.name, type, Constant));
                 }else{
-                    dcls.add(new ArrVarDcl(c.name, type, c.dims, DefinedValues.getScope(), Constant));
+                    dcls.add(new ArrVarDcl(c.name, type, c.dims, Constant));
                 }
             }else{
-                dcls.add(new SmplVar(c.name, type, c.value, DefinedValues.getScope(), Constant));
+                dcls.add(new SmplVar(c.name, type, c.value, Constant));
             }
         }
         for (VarDcl v : dcls) {

@@ -1,7 +1,7 @@
-int c;
 
 function void main() begin
 int a = 1;
+int c = 2;
     int f = 3;
     int h=f, b=0;
     f=h + 1;

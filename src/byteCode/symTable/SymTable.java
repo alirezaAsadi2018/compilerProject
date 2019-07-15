@@ -2,7 +2,7 @@ package byteCode.symTable;
 
 import byteCode.declaration.function.FuncDcl;
 import byteCode.symTable.dscp.Dscp;
-import byteCode.symTable.dscp.DscpVarDynamic;
+import byteCode.symTable.dscp.DscpVar;
 import jdk.internal.org.objectweb.asm.Label;
 import jdk.internal.org.objectweb.asm.Type;
 
@@ -134,7 +134,7 @@ public class SymTable {
             throw new IllegalArgumentException("variable already declared");
         }
         getLastFrame().put(name, dscp);
-        if (dscp instanceof DscpVarDynamic)
+        if (dscp instanceof DscpVar)
             getLastFrame().index += dscp.getType().getSize() - 1;
     }
 

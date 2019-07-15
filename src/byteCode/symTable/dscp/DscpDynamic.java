@@ -2,7 +2,7 @@ package byteCode.symTable.dscp;
 
 import jdk.internal.org.objectweb.asm.Type;
 
-public class DscpDynamic extends Dscp{
+public class DscpDynamic extends Dscp {
     int index;
 
     DscpDynamic(String name, Type type, int index, boolean constant) {
