@@ -13,16 +13,16 @@ public class MyMain {
     public static void main(String[] args) {
         ComplexSymbolFactory csf = new ComplexSymbolFactory();
         try {
-            MyScanner scanner = new MyScanner(new FileReader("input.c"), csf);
+            MyScanner scanner = new MyScanner(new FileReader("input - Copy.c"), csf);
             parser p = new parser(scanner, csf);
             Object result = p.parse().value;
-            Program pr = (Program) result;
-            pr.compile(DefinedValues.nameClass);
+            Program program = (Program) result;
+            program.compile();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println("parsing failed");
+            System.err.println("fail");
         }
     }
 }

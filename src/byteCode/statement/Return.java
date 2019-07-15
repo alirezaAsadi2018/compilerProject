@@ -43,7 +43,7 @@ public class Return extends Statement{
             mv.visitInsn(exp1.getType().getOpcode(Opcodes.IRETURN));
         }else {
             if(!f.getType().equals(Type.VOID_TYPE)){
-                throw new RuntimeException("you should try and return something");
+                throw new RuntimeException("should  return something");
             }
             mv.visitInsn(Opcodes.RETURN);
         }

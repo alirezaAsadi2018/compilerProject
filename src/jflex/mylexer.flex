@@ -115,7 +115,7 @@ EC = "//" [^\r\n]* {new_line}
     "return"			 { return symbol(sym.RETURN); }
     "continue"			 { return symbol(sym.CONTINUE); }
     "for"				 { return symbol(sym.FOR); }
-    "void"				 { return symbol(sym.VOID); }
+    "void"				 { return symbol(sym.VOID, "void"); }
     "repeat"		     { return symbol(sym.REPEAT); }
     "if"				 { return symbol(sym.IF); }
     "until"			     { return symbol(sym.UNTIL); }

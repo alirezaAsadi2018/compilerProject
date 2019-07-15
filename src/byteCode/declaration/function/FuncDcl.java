@@ -7,13 +7,42 @@ import jdk.internal.org.objectweb.asm.Type;
 import java.util.ArrayList;
 
 public abstract class FuncDcl extends Node {
+    public Type[] inputs;
     protected Type type;
     protected String name;
     protected String signature;
-    public Type [] inputs;
-    public String getSignature(){
+
+    public FuncDcl(String returnType, String name, ArrayList<FuncArg> arguments) {
+        this.type = SymTable.getTypeFromName(returnType);
+        this.name = name;
+        inputs = new Type[arguments.size()];
+        int i = 0;
+        for (FuncArg a : arguments) {
+            inputs[i++] = a.getType();
+        }
+
+
+        StringBuilder signature = new StringBuilder();
+        signature.append("(");
+        for (Type typeIn : inputs) {
+            signature.append(typeIn.toString());
+        }
+        signature.append(")");
+        signature.append(type.toString());
+        this.signature = signature.toString();
+
+        try {
+            SymTable.getInstance().getFunction(name, inputs);
+        } catch (RuntimeException r) {
+            SymTable.getInstance().addFunction(this);
+        }
+
+    }
+
+    public String getSignature() {
         return signature;
     }
+
     public String getName() {
         return name;
     }
@@ -22,65 +51,16 @@ public abstract class FuncDcl extends Node {
         return type;
     }
 
-    public FuncDcl(String type1, String name, ArrayList<FuncArg> arguments) {
-        this.type = SymTable.getTypeFromName(type1);
-        this.name = name;
-        inputs = new Type[arguments.size()];
-        int i = 0;
-        for(FuncArg f : arguments){
-            inputs[i++]=f.getType();
-        }
+    public boolean checkIfEqual(Type[] inputs, String name) {
 
-
-        String signature = "";
-        signature = signature + "(";
-        for(Type typeIn : inputs){
-            signature = signature+typeIn.toString();
-        }
-        signature = signature + ")";
-        signature = signature + type.toString();
-        this.signature = signature;
-
-        try {
-            SymTable.getInstance().getFunction(name,inputs);
-        }catch (RuntimeException r){
-            SymTable.getInstance().addFunction(this);
-        }
-
-    }
-
-    public FuncDcl(String functionSignature, String name) {
-        this.signature = functionSignature;
-        Type[] types = Type.getArgumentTypes(functionSignature);
-        Type [] arguments = types;
-        this.type = Type.getType(functionSignature.substring(functionSignature.indexOf(')')+1));
-        this.name = name;
-        inputs = new Type[arguments.length];
-        int i = 0;
-        for(Type t : arguments){
-            inputs[i++]=t;
-        }
-
-
-
-        try {
-            SymTable.getInstance().getFunction(name,inputs);
-        }catch (RuntimeException r){
-            SymTable.getInstance().addFunction(this);
-        }
-
-    }
-
-    public boolean checkIfEqual(Type [] inputs, String name){
-
-        if (!this.name.equals(name)){
+        if (!this.name.equals(name)) {
             return false;
-        }else if (this.inputs.length!=inputs.length){
+        } else if (this.inputs.length != inputs.length) {
             return false;
-        }else {
+        } else {
             int i = 0;
-            for(Type t : inputs){
-                if(!this.inputs[i++].equals(t)){
+            for (Type t : inputs) {
+                if (!this.inputs[i++].equals(t)) {
                     return false;
                 }
             }

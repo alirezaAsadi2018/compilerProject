@@ -32,7 +32,6 @@ public class PreMinMin extends UnExp {
 
             type = var.getType();
 
-            // TODO: 29/06/2018 For Array And Records Should Be Added !!
             if (e instanceof SmplVarExp) {
                 Dscp dscp = var.getDSCP();
 
@@ -40,26 +39,23 @@ public class PreMinMin extends UnExp {
                     int index = ((DscpDynamic) dscp).getIndex();
                     if (type == Type.INT_TYPE || type == Type.CHAR_TYPE) {
                         mv.visitIincInsn(index, -1);
-                        var.compile(mv,cv); //Prefix
-                    }
-                    else {
-                        var.compile(mv,cv);
+                        var.compile(mv, cv); //Prefix
+                    } else {
+                        var.compile(mv, cv);
 
                         if (type == Type.DOUBLE_TYPE) {
                             mv.visitInsn(DCONST_1);
-                        }
-                        else {
+                        } else {
                             mv.visitInsn(LCONST_1);
                         }
 
                         mv.visitInsn(type.getOpcode(ISUB));
                         mv.visitVarInsn(type.getOpcode(ISTORE), index);
 
-                        var.compile(mv,cv); //Prefix
+                        var.compile(mv, cv); //Prefix
                     }
 
                 } else {
-                    // TODO: 29/06/2018 For Static Variables
                     throw new RuntimeException();
                 }
             }

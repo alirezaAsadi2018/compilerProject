@@ -22,24 +22,21 @@ public class DivideAssign extends Assignment {
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
         this.type = var.getType();
-        // TODO: 29/06/2018 handle Arrays
         if (!(var instanceof SmplVarExp))
             throw new RuntimeException();
 
         Dscp dscp = var.getDSCP();
-        var.compile(mv,cv);
-        exp.compile(mv,cv);
+        var.compile(mv, cv);
+        exp.compile(mv, cv);
         if (var.getType() != exp.getType())
             UtilFunctions.cast(exp.getType(), var.getType(), mv, cv);
         mv.visitInsn(var.getType().getOpcode(Opcodes.IDIV));
-        if(dscp instanceof DscpDynamic) {
+        if (dscp instanceof DscpDynamic) {
             int index = ((DscpDynamic) dscp).getIndex();
             mv.visitVarInsn(var.getType().getOpcode(ISTORE), index);
-            var.compile(mv,cv);
-        }else{
-            // TODO: 29/06/2018 For Static Variables;
+            var.compile(mv, cv);
+        } else {
             mv.visitFieldInsn(Opcodes.PUTSTATIC, DefinedValues.nameClass, dscp.getName(), dscp.getType().toString());
-//            throw new RuntimeException();
         }
     }
 }

@@ -6,9 +6,7 @@ import jdk.internal.org.objectweb.asm.MethodVisitor;
 import jdk.internal.org.objectweb.asm.Opcodes;
 
 public class Break extends Statement {
-    public Break(){
-
-    }
+    public Break(){}
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
         if(SymTable.getInstance().canHaveBreak()){

@@ -52,15 +52,10 @@ public class UtilFunctions {
     }
 
     public static void cast(Type type1, Type type2, MethodVisitor mv, ClassVisitor cv) {
-        if (isObject(type1) || isObject(type2)) {
-            if (type1 != type2) {
-                throw new RuntimeException("we don't have operator overloading ... yet");
-            }
-        } else {
-            if (!checkForDouble(type1, type2, mv, cv)) {
-                if (!checkForFloat(type1, type2, mv, cv)) {
-                    checkForLong(type1, type2, mv, cv);
-                }
+
+        if (!checkForDouble(type1, type2, mv, cv)) {
+            if (!checkForFloat(type1, type2, mv, cv)) {
+                checkForLong(type1, type2, mv, cv);
             }
         }
 

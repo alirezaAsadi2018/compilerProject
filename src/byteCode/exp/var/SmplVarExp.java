@@ -17,7 +17,7 @@ public class SmplVarExp extends Var {
 
     @Override
     public void compile(MethodVisitor mv, ClassVisitor cv) {
-        type = this.getType();
+        type = getType();
         Dscp dscp = getDSCP();
         if (dscp instanceof DscpDynamic) {
             int index = ((DscpDynamic) dscp).getIndex();

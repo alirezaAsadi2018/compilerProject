@@ -9,18 +9,4 @@ public class DscpArrStatic extends DscpStatic {
         super(name, type,constant);
         this.dimensions = dimensions;
     }
-
-    DscpArrStatic(String name, Class<?> clazz, int dimensions,boolean constant) {
-        super(name, clazz,constant);
-        this.dimensions = dimensions;
-    }
-
-    DscpArrStatic(String name, String typeS, int dimensions,boolean constant) {
-        super(name, typeS,constant);
-        this.dimensions = dimensions;
-    }
-
-    public int getDimensions() {
-        return dimensions;
-    }
 }

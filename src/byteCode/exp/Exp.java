@@ -8,10 +8,9 @@ import static jdk.internal.org.objectweb.asm.Opcodes.IF_ICMPLE;
 public abstract class Exp extends Node {
     protected Type type = null;
 
-    //TODO should do more and over ride for type checking
     public Type getType() {
         if(type == null)
-            throw new RuntimeException("Type is Not Set!!!");
+            throw new RuntimeException("type not set");
 
         return type;
     }

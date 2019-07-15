@@ -8,8 +8,6 @@ public class BoolConstExp extends Constant {
     private Boolean value;
 
     public BoolConstExp(Boolean value) {
-//        if (DefinedValues.DEBUG)
-//            System.out.println(value);
         this.value = value;
         type = Type.BOOLEAN_TYPE;
     }

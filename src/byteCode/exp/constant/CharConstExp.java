@@ -8,8 +8,6 @@ public class CharConstExp extends Constant {
     private Character value;
 
     public CharConstExp(Character value) {
-//        if(DefinedValues.DEBUG)
-//            System.out.println(value);
         this.value = value;
         type = Type.CHAR_TYPE;
     }

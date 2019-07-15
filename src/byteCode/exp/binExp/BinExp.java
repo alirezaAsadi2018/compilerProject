@@ -30,9 +30,6 @@ public abstract class BinExp extends Exp {
 
     }
     public BinExp setBinaryExp(Exp exp1, Exp exp2){
-        if(DefinedValues.DEBUG){
-            System.out.println("hey");
-        }
         this.e1=exp1;
         this.e2=exp2;
         return this;

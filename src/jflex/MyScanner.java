@@ -1167,7 +1167,7 @@ public class MyScanner implements java_cup.runtime.Scanner {
             // fall through
           case 127: break;
           case 54: 
-            { return symbol(sym.VOID);
+            { return symbol(sym.VOID, "void");
             } 
             // fall through
           case 128: break;

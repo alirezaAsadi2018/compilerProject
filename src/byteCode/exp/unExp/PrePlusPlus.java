@@ -30,7 +30,6 @@ public class PrePlusPlus extends UnExp {
         Var var = (Var) e;
         type = e.getType();
 
-        // TODO: 29/06/2018 For Array And Records Should Be Added !!
         if (e instanceof SmplVarExp) {
             Dscp dscp = var.getDSCP();
 
@@ -38,25 +37,22 @@ public class PrePlusPlus extends UnExp {
                 int index = ((DscpDynamic) dscp).getIndex();
                 if (type == Type.INT_TYPE || type == Type.CHAR_TYPE) {
                     mv.visitIincInsn(index, 1);
-                    var.compile(mv,cv); //Prefix
-                }
-                else {
+                    var.compile(mv, cv); //Prefix
+                } else {
                     if (type == Type.DOUBLE_TYPE) {
                         mv.visitInsn(DCONST_1);
-                    }
-                    else {
+                    } else {
                         mv.visitInsn(LCONST_1);
                     }
 
-                    var.compile(mv,cv);
+                    var.compile(mv, cv);
                     mv.visitInsn(type.getOpcode(IADD));
                     mv.visitVarInsn(type.getOpcode(ISTORE), index);
 
-                    var.compile(mv,cv); //Prefix
+                    var.compile(mv, cv); //Prefix
                 }
 
             } else {
-                // TODO: 29/06/2018 For Static Variables
                 throw new RuntimeException();
             }
         }

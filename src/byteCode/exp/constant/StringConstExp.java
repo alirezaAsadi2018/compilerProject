@@ -8,8 +8,6 @@ public class StringConstExp extends Constant {
     private String value;
 
     public StringConstExp(String value) {
-//        if (DefinedValues.DEBUG)
-//            System.out.println(value);
         type = Type.getType(String.class);
         this.value = value;
     }

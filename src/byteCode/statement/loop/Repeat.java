@@ -11,7 +11,8 @@ import jdk.internal.org.objectweb.asm.Opcodes;
 
 public class Repeat extends Loop {
     Exp exp;
-    public  Repeat(Block block, Exp exp){
+
+    public Repeat(Block block, Exp exp) {
         super(block);
         this.exp = exp;
     }
@@ -21,12 +22,11 @@ public class Repeat extends Loop {
         SymTable.getInstance().addScope(SymTable.LOOP);
         mv.visitLabel(SymTable.getInstance().getLabelStart());
         InEq notEqual = new InEq();
-        notEqual.setBinaryExp(exp,new IntConstExp(0));
-        // 0 : 0 : false
-        notEqual.compile(mv,cv);
-        mv.visitJumpInsn(Opcodes.IFEQ,SymTable.getInstance().getLabelLast());
-        block.compile(mv,cv);
-        mv.visitJumpInsn(Opcodes.GOTO,SymTable.getInstance().getLabelStart());
+        notEqual.setBinaryExp(exp, new IntConstExp(0));
+        notEqual.compile(mv, cv);
+        mv.visitJumpInsn(Opcodes.IFEQ, SymTable.getInstance().getLabelLast());
+        block.compile(mv, cv);
+        mv.visitJumpInsn(Opcodes.GOTO, SymTable.getInstance().getLabelStart());
         mv.visitLabel(SymTable.getInstance().getLabelLast());
         SymTable.getInstance().popScope();
     }

@@ -4,14 +4,13 @@ import jdk.internal.org.objectweb.asm.ClassVisitor;
 import jdk.internal.org.objectweb.asm.MethodVisitor;
 import jdk.internal.org.objectweb.asm.Type;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.*;
+import static jdk.internal.org.objectweb.asm.Opcodes.LCONST_0;
+import static jdk.internal.org.objectweb.asm.Opcodes.LCONST_1;
 
 public class LongConstExp extends Constant {
     private Long value;
 
     public LongConstExp(Long value) {
-//        if(DefinedValues.DEBUG)
-//            System.out.println(value);
         this.value = value;
         type = Type.LONG_TYPE;
     }

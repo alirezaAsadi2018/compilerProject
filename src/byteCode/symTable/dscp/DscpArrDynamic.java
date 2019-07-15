@@ -10,20 +10,4 @@ public class DscpArrDynamic extends DscpDynamic {
 
         this.dimensions = dims;
     }
-
-    DscpArrDynamic(String name, Class<?> clazz, int index, int dims,boolean constant) {
-        super(name, clazz, index,constant);
-
-        this.dimensions = dims;
-    }
-
-    DscpArrDynamic(String name, String typeS, int index, int dims,boolean constant) {
-        super(name, typeS, index,constant);
-
-        this.dimensions = dims;
-    }
-
-    public int getDimensions() {
-        return dimensions;
-    }
 }

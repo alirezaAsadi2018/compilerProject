@@ -1,13 +1,12 @@
-int a=0;
-
 int c;
 
-function void main(int d, int e) begin
+function void main() begin
+int a = 1;
     int f = 3;
     int h=f, b=0;
     f=h + 1;
     string s = "asdslkdj";
-    if(a==b)begin
+    if(a==c)begin
         return;end
 end
 

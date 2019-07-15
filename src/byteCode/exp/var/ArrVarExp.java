@@ -46,12 +46,4 @@ public class ArrVarExp extends Var {
         mv.visitInsn(getType().getElementType().getOpcode(IALOAD));
     }
 
-    public void compileStoreValue(Exp exp, MethodVisitor mv, ClassVisitor cv) {
-        if(exp.getType() != getType().getElementType())
-            throw new RuntimeException("Bad Store Type");
-
-        loadReferenceAndIndex(mv,cv);
-        exp.compile(mv,cv);
-        mv.visitInsn(getType().getElementType().getOpcode(IASTORE));
-    }
 }

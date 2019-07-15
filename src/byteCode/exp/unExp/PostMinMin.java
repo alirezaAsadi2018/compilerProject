@@ -1,6 +1,5 @@
 package byteCode.exp.unExp;
 
-import byteCode.declaration.var.SmplVar;
 import byteCode.exp.Exp;
 import byteCode.exp.var.SmplVarExp;
 import byteCode.exp.var.Var;
@@ -36,25 +35,22 @@ public class PostMinMin extends UnExp {
 
                 type = var.getType();
 
-                // TODO: 29/06/2018 For Array And Records Should Be Added !!
                 if (e instanceof SmplVarExp) {
                     Dscp dscp = var.getDSCP();
 
                     if (dscp instanceof DscpDynamic) {
                         int index = ((DscpDynamic) dscp).getIndex();
                         if (type == Type.INT_TYPE || type == Type.CHAR_TYPE) {
-                            var.compile(mv,cv);
+                            var.compile(mv, cv);
                             mv.visitIincInsn(index, -1);
-                        }
-                        else {
-                            var.compile(mv,cv);//Postfix
+                        } else {
+                            var.compile(mv, cv);//Postfix
 
-                            var.compile(mv,cv);
+                            var.compile(mv, cv);
 
                             if (type == Type.DOUBLE_TYPE) {
                                 mv.visitInsn(DCONST_1);
-                            }
-                            else {
+                            } else {
                                 mv.visitInsn(LCONST_1);
                             }
 
@@ -63,7 +59,6 @@ public class PostMinMin extends UnExp {
                         }
 
                     } else {
-                        // TODO: 29/06/2018 For Static Variables
                         throw new RuntimeException();
                     }
                 }

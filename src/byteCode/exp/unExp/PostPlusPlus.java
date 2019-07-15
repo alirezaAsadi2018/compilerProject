@@ -11,7 +11,7 @@ import jdk.internal.org.objectweb.asm.Type;
 
 import static jdk.internal.org.objectweb.asm.Opcodes.*;
 
-public class PostPlusPlus extends UnExp{
+public class PostPlusPlus extends UnExp {
 
     public PostPlusPlus(Exp e) {
         super(e);
@@ -31,7 +31,6 @@ public class PostPlusPlus extends UnExp{
             Var var = (Var) e;
             type = e.getType();
 
-            // TODO: 29/06/2018 For Array And Records Should Be Added !!
             if (e instanceof SmplVarExp) {
                 Dscp dscp = var.getDSCP();
 
@@ -40,12 +39,10 @@ public class PostPlusPlus extends UnExp{
                     if (type == Type.INT_TYPE || type == Type.CHAR_TYPE) {
                         var.compile(mv, cv); //Postfix
                         mv.visitIincInsn(index, 1);
-                    }
-                    else {
+                    } else {
                         if (type == Type.DOUBLE_TYPE) {
                             mv.visitInsn(DCONST_1);
-                        }
-                        else {
+                        } else {
                             mv.visitInsn(LCONST_1);
                         }
 
@@ -58,7 +55,6 @@ public class PostPlusPlus extends UnExp{
                     }
 
                 } else {
-                    // TODO: 29/06/2018 For Static Variables
                     throw new RuntimeException();
                 }
             }
